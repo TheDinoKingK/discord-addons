@@ -1,0 +1,183 @@
+/**
+ * @name Bottom Aligned Server Bar
+ * @description Currently modifies mrtipson's server-bar css to anchor to the bottom of the window, along with some other tweaks
+ * @author TheDinoKingK
+ * @version 1.0.5
+ * @authorId 126281924059157154
+ * @donate https://kofidontworkyet/
+ * @website https://TheDinoKing.com/
+ * @source https://notavaliablelmao/
+ * @updateUrl https://againnotavaliablelmao/
+ */
+
+/* 
+    TODO: center sidebar dynamically (patched but will need to change so it fits with other changes later)
+    TODO: merge user area with the server sidebar
+    TODO: fix server label hover height drastically changing due to differing scales
+    TODO: automatically scale element down when not in use (might not implement)
+*/
+
+
+:root {
+    
+    /* These are settings for server-bar-hide.css */
+
+	--sb-collapsed-bottom: 22px;
+	--sb-collapsed-top: 0px;
+	--sb-transition-property: bottom;
+
+    /* --sb-top: 72px; */
+    --sb-right: 0.3%;
+    /* --sb-bottom: 0px; */
+    --sb-left: 0.3%;
+
+    --sb-origin: left top;
+    --sb-rotate-bar: 90deg;
+    /* --sb-rotate-bar-inner: 180deg; */
+    --sb-rotate-servers: 90deg;
+
+    /* --sb-bar-top: 0;
+    --sb-bar-left: 100%; */
+    --sb-bar-height: 98.9vw;
+    /* --sb-bar-height: vw; */
+
+
+    --sb-label-left: calc(-50% - 42px);
+    /* --sb-label-top: calc(50% + 40px); */
+	--sb-label-top: calc(-50% - 41px);
+
+	--sb-top: 0;
+	--sb-bottom: 78px;
+	--sb-rotate-bar: -90deg;
+	--sb-rotate-bar-inner: none;
+
+	--sb-bar-top: 100%;
+	--sb-bar-left: 0;
+
+	/* These are toggles for server-folders.css (if used) */
+
+	--bar-toggle-l: 100%;
+	--bar-toggle-r: none;
+
+}
+
+/* remove server sidebar's "online friends" count */
+
+#vc-friendcount {
+    opacity: 0;
+    transform: rotate(90deg);
+    top: 97%;
+    position: absolute;
+}
+
+
+/* basic centering stolen from Rag404 (thankies) */
+
+.scroller_fea3ef {
+    padding-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+}
+
+
+.tutorialContainer_f9623d {
+    justify-content: start;
+}
+
+
+/* .item_fd07a3 span[style*="40px"] {
+    width: 200px;
+} */
+
+/* .scroller_fea3ef [aria-label="Servers"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+} */
+
+/* .scroller_fea3ef .tutorialContainer_f9623d {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scroller_fea3ef .listItem_c96c45 .guildSeparator_d0c57e  {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+}
+
+.scroller_fea3ef .tutorialContainer_c96c45 {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+} */
+
+
+
+.base_a4d4d9 /* friends list, chat */{
+    position: absolute;
+    left: var(--sb-left);
+    top: var(--sb-top);
+    bottom: var(--sb-bottom);
+    right: var(--sb-right);
+}
+.guilds_a4d4d9.hidden_fea3ef+.base_a4d4d9 /* hide server bar when fullscreen */{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+.container_a4d4d9 /* wrapper around base and navigation bar */{
+    position: relative;
+}
+
+.baseLayer_d4b6c5 > .container_a4d4d9 { flex-direction: column-reverse }
+
+.guilds_a4d4d9 /* the whole navigation bar */{
+    position: absolute;
+    top: var(--sb-bar-top);
+    left: var(--sb-bar-left);
+    transform-origin: var(--sb-origin);
+    transform: rotate(var(--sb-rotate-bar));
+    height: var(--sb-bar-height);
+	max-height: 99vw;
+}
+
+.guilds_a4d4d9 .scroller_fea3ef /* the navigation bar */{
+    padding-top: 21px;
+}
+[aria-label="Servers"] > * /* all servers and folders */{
+    margin-top: 10px;
+}
+.guilds_a4d4d9 .listItem_c96c45 .wrapper_c5f96a /* folder */{
+    transform: rotate(var(--sb-rotate-servers));
+}
+.guilds_a4d4d9 > * /* Server bar elements */{
+    transform: rotate(var(--sb-rotate-bar-inner));
+}
+div[id^="folder"]>* /* servers in the opened folder */{
+    margin: 8px 0;
+}
+.layer_cd0de5 [aria-label*="Pinned Messages"] > .messagesPopoutWrap_ac90a2 /* pinned messages */,
+.layer_cd0de5 [aria-label="Recent Mentions"] /* recent mentions */,
+.layer_cd0de5 [aria-label="Unreads"] /* recent mentions */{
+    max-height: 80vh !important;
+}
+.tooltipRight_b6c360.tooltip_b6c360 /* server name tooltip */{
+    /* box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.50) !important; */
+    box-shadow: var(--msg-soft-shadow) !important;
+    position: relative;
+    left: var(--sb-label-left);
+    transform: translateY(var(--sb-label-top, 0)) !important;
+}
+.tooltipRight_b6c360>.tooltipPointer_b6c360 /* little arrow for tooltip */{
+    opacity: 0;
+}
+.unreadMentionsIndicatorTop_fea3ef /* new message red popup bottom */,
+.unreadMentionsIndicatorBottom_fea3ef /* new message red popup bottom */{
+    display: none;
+}

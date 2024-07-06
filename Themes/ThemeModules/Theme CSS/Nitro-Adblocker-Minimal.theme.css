@@ -1,0 +1,26 @@
+/**
+ * @name Nitro Adblocker (Minimal)
+ * @description A much less extreme 'adblocker' for nitro upsells that tries to maintain functionality
+ * @author TheDinoKingK
+ * @version 0.2.0
+ * @authorId 126281924059157154
+ * @donate https://kofidontworkyet/
+ * @website https://TheDinoKing.com/
+ * @source https://notavaliablelmao/
+ * @updateUrl https://againnotavaliablelmao/
+ */
+
+/* disables nitro profile ad banner */
+.container_da1432 {
+    display: none;
+}
+
+/* nitro server profiles setting upsell */
+.upsellOverlay_eb49af {
+    display: none;
+}
+
+/* disables nitro subscription button in direct messages sidebar */
+.channel_c91bad .link_c91bad[data-list-item-id*="___nitro"] {
+    display: none;
+}

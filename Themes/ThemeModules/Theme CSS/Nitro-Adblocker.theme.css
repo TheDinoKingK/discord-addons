@@ -1,0 +1,83 @@
+/**
+ * @name Nitro Adblocker
+ * @description An extreme 'adblocker' that removes as many upsells or 'unneccessary' elements related to nitro, this WILL DISABLE some functionality thats related
+ * @author TheDinoKingK
+ * @version 0.2.0
+ * @authorId 126281924059157154
+ * @donate https://kofidontworkyet/
+ * @website https://TheDinoKing.com/
+ * @source https://notavaliablelmao/
+ * @updateUrl https://againnotavaliablelmao/
+ */
+
+/* 
+    TODO: hide server boost progress until hovered
+*/
+
+
+/* disables nitro profile ad banner */
+
+.container_da1432 {
+    display: none;
+}
+
+/* nitro server profiles setting upsell */
+
+.upsellOverlay_eb49af {
+    display: none;
+}
+
+/* disables nitro custom profile preview */
+/* !!BREAKS VENCORDS FAKE NITRO PROFILE SETUP!! */
+
+.tryItOutSection_eb2d2c {
+    display: none;
+}
+
+/* disables the nitro gift button in message box, (taken from DarkPlus theme by DevEvil)  */
+
+button[aria-label="Send a gift"] {
+  display: none;
+}
+
+/* disables nitro subscription button in direct messages sidebar */
+
+.channel_c91bad .link_c91bad[data-list-item-id*="___nitro"] {
+    display: none;
+}
+
+/* disables nitro shop in direct messages sidebar */
+
+.channel_c91bad .link_c91bad[data-list-item-id*="___shop"] {
+    display: none;
+}
+
+/* disables nitro button in the billing settings */
+
+.premiumTab_c10c74[data-tab-id="Discord Nitro"] {
+    display: none;
+}
+
+/* disables nitro server boost button in the billing settings */
+
+.item_a0[data-tab-id="Nitro Server Boost"] {
+    display: none;
+}
+
+/* disables gift inventory button in the billing settings */
+
+.item_a0[data-tab-id="Library Inventory"] {
+    display: none;
+}
+
+/* disables discord merch store link in settings */
+
+.item_a0[data-tab-id="merchandise"] {
+    display: none;
+}
+
+/* disables discord social media links in settings (why is this here anyway?) */
+
+.socialLinks_c44e94 {
+    display: none;
+}

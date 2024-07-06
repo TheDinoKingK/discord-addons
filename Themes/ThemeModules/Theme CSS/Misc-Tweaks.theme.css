@@ -1,0 +1,65 @@
+/**
+ * @name Miscellaneous Tweaks
+ * @description Smaller tweaks that are either highly experimental or only for my own taste
+ * @author TheDinoKingK
+ * @version 0.0.1
+ * @authorId 126281924059157154
+ * @donate https://kofidontworkyet/
+ * @website https://TheDinoKing.com/
+ * @source https://notavaliablelmao/
+ * @updateUrl https://againnotavaliablelmao/
+ */
+
+
+/* recolor discord accent to red with blurple recolor*/
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);
+
+/* All colors are in RGB format (red, green, blue) use: https://www.google.com/search?q=colorpicker	*/
+
+/* @import url("https://discordstyles.github.io/SoftX/VerticalUserArea.css"); */ /* Vertical user area. Moves the mute, defean and settings icons to the server list. | Remove this line to disable. */
+
+:root {
+	/* discord recolor */
+
+	--accentcolor:		185, 15, 40;		/*	blurple		-	default:	88, 101, 242			*/
+	/* --accentcolor2:		185, 15, 40; */			/* boostpink	-	default:	255, 115, 250	*/		
+	--linkcolor:		0, 237, 36;		/*	link		-	default:	0, 176, 244			*/
+
+
+    --channels-width: 300px; /* Width of the channels list. | Default: 300px */
+}
+
+
+/* user & settings widget */
+/* .container_b2ca13 {
+
+} */
+/* .panels_a4d4d9 {
+
+} */
+
+
+/* offset user profile popup to account for moved server list */
+.accountProfilePopoutWrapper_b2ca13 {
+	transform: translateX(21px);
+}
+
+/* fix side affect of online status dropdown going wacko from the user profile popoff offset */
+.submenuPaddingContainer_d90b3d {
+	transform: translate(-8px, -328px);
+	width: 320px;
+	height: 231.68px;
+}
+
+
+/* I dont remember what this did */
+.tier0_c87d73 {
+	background: rgb(100, 100, 100) linear-gradient(195deg, rgba(88, 101, 242, 0.9), rgba(88, 101, 242, 0.5));
+} 
+
+/* stop rounding the vc chat like that */
+.wrapper_d880dc.chatSidebarOpen_d880dc .callContainer_d880dc  {
+    border-radius: 0% !important;
+    z-index: -1;
+}
+
