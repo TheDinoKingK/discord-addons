@@ -16,7 +16,7 @@ If you do come across any issues or bugs please mention them to me in the issues
 
 ## Collapsible Member list's
 server member lists take up much less space unless you hover over them
-This was inspired by devEvils take in their [dark+ theme](https://betterdiscord.app/theme/Dark%2B) and used some of mrTipsons "hide server bar" css as a starting point, attempting to collapse the member list while also remaining pretty.
+This was inspired by [devEvils](https://github.com/DevEvil99) take in their [dark+ theme](https://betterdiscord.app/theme/Dark%2B) and used some of [mrTipsons](https://github.com/MrTipson) ["hide server bar"](https://github.com/MrTipson/DiscordCSS/blob/master/css/server-bar-hide.css) css as a starting point, attempting to collapse the member list while also remaining pretty.
 
 currently it only works with the main member list in servers & group chats, but more lists might be collapsed aswell
 
@@ -38,7 +38,7 @@ for example the annoying activity card in the server members list that takes up 
 
 
 ## Bottom Horizontal Server Bar
-Currently this is simply an edit of mrTipsons horizontal server bar code to anchor itself to the bottom of the screen along with being centered(with the help of Rag404)
+Currently this is simply an edit of [mrTipsons](https://github.com/MrTipson) ["horizontal server bar" code](https://github.com/MrTipson/DiscordCSS/blob/master/css/server-bar.css) to anchor itself to the bottom of the screen along with being centered(with the help of [Rag404](https://github.com/Rag404))
 I plan to modify it further and anchor other elements to this aswell, but for now it works fine for me :D
 
 
