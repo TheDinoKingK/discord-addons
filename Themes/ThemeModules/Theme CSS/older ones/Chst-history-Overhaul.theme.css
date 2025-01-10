@@ -1,18 +1,3 @@
-/**
- * @name (Slightly) Fancy Chat
- * @description A few small tweaks to the chat so it looks prettier (mainly message bubbles & dropshadows)
- * @author TheDinoKingK
- * @version 1.0.5
- * @authorId 126281924059157154
- * @donate https://kofidontworkyet/
- * @website https://TheDinoKing.com/
- * @source https://notavaliablelmao/
- * @updateUrl https://againnotavaliablelmao/
- */
-
-/* TODO: color YOUR OWN messages with the accent color (might not be possible with pure css) */
-
-
 :root {
     /* random variables */
     --msg-soft-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3);
@@ -20,14 +5,14 @@
     --msg-bubble-color: 35, 35, 35;
 }
 
-/* message bubble background (original code stolen from DarkPlus By DevEvil) */
+/* message bubble background (original stolen from DarkPlus By DevEvil) */
 
-.cozyMessage_d5deea .contents_ec86aa > .markup_d6076c:not(:empty, code) {
+/* .cozyMessage_d5deea .contents_ec86aa > .markup_d6076c:not(:empty, code) {
     background-color: rgba(var(--msg-bubble-color));
     display: inline-block;
     max-width: 1200px;
     min-width: 20px;
-    /* box-shadow: var(--msg-soft-shadow); */
+    // box-shadow: var(--msg-soft-shadow);
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -36,9 +21,11 @@
     padding: 12px;
     padding-right: 14px;
     border-radius: 12px;
-}
+} */
 
-/* Adds a dropshadow to literally everything in the chat history */
+/* TODO: color YOUR OWN messages with the accent color */
+
+
 .scroller_e2e187 {
     filter: drop-shadow(var(--msg-drop-soft-shadow));
 }
@@ -48,7 +35,6 @@
     filter: drop-shadow(var(--msg-img-soft-shadow));
 } */
 
-/* Adds a dropshadow to the message box */
 .scrollableContainer_d0696b {
     /* box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3); */
     box-shadow: var(--msg-soft-shadow);
@@ -56,7 +42,6 @@
 
 
 /* chat fading at the bottom effect */
-
 .messagesWrapper_e2e187:after {
     position: absolute;
     bottom: 0;  

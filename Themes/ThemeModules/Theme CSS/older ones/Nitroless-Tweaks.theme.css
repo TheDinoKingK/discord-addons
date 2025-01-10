@@ -1,0 +1,50 @@
+/* Removing Annoying UI Elements & Nitro Upsells Section */
+
+
+/* server sidebars "online friends" count */
+
+#vc-friendcount {
+    opacity: 0;
+    transform: rotate(90deg);
+    top: 97%;
+    position: absolute;
+}
+
+ /* disables nitro profile ad banner */
+
+.container_da1432 {
+    display: none;
+}
+
+/* nitro server profiles setting upsell */
+
+.upsellOverlay_eb49af {
+    display: none;
+}
+
+/* disables nitro custom profile preview */
+/* !!BREAKS VENCORDS FAKE NITRO PROFILE SETUP!! */
+
+.tryItOutSection_eb2d2c {
+    display: none;
+}
+
+/* disables the nitro gift button in message box, (taken from DarkPlus theme by DevEvil)  */
+
+button[aria-label="Send a gift"] {
+  display: none;
+}
+
+/* .lookInverted_a299dc {
+    color: black;
+} */
+
+/* disables nitro subscription button in direct messages sidebar */
+.channel_c91bad .link_c91bad[data-list-item-id*="___nitro"] {
+    display: none;
+}
+
+/* disables nitro shop in direct messages sidebar, this doesn't disable the annoying shop pings though so you will have ghost pings due to this */
+.channel_c91bad .link_c91bad[data-list-item-id*="___shop"] {
+    display: none;
+}

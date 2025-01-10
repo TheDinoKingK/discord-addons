@@ -17,11 +17,9 @@
     TODO: automatically scale element down when not in use (might not implement)
 */
 
-
 :root {
-    
-    /* These are settings for server-bar-hide.css */
 
+    /* These are settings for server-bar-hide.css */
 	--sb-collapsed-bottom: 22px;
 	--sb-collapsed-top: 0px;
 	--sb-transition-property: bottom;
@@ -47,22 +45,20 @@
 	--sb-label-top: calc(-50% - 41px);
 
 	--sb-top: 0;
-	--sb-bottom: 78px;
+	--sb-bottom: 86px;
 	--sb-rotate-bar: -90deg;
 	--sb-rotate-bar-inner: none;
 
-	--sb-bar-top: 100%;
+	--sb-bar-top: 98%;
 	--sb-bar-left: 0;
 
 	/* These are toggles for server-folders.css (if used) */
-
 	--bar-toggle-l: 100%;
 	--bar-toggle-r: none;
 
 }
 
 /* remove server sidebar's "online friends" count */
-
 #vc-friendcount {
     opacity: 0;
     transform: rotate(90deg);
@@ -72,7 +68,6 @@
 
 
 /* basic centering stolen from Rag404 (thankies) */
-
 .scroller_fea3ef {
     padding-bottom: 21px;
     display: flex;
@@ -180,4 +175,18 @@ div[id^="folder"]>* /* servers in the opened folder */{
 .unreadMentionsIndicatorTop_fea3ef /* new message red popup bottom */,
 .unreadMentionsIndicatorBottom_fea3ef /* new message red popup bottom */{
     display: none;
+}
+
+.itemsContainer_fea3ef {
+    justify-content: safe center;
+}
+
+
+/* hacky centering fix for now */
+.footer_d71945 {
+    position: absolute;
+    transform: translatey(48vw);
+}
+.footer_d71945 .listItem_c96c45 {
+    padding-bottom: 1vw;
 }

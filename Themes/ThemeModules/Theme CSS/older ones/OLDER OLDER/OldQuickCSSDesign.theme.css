@@ -1,0 +1,318 @@
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);
+
+/* All colors are in RGB format (red, green, blue) use: https://www.google.com/search?q=colorpicker	*/
+
+/* @import url("https://discordstyles.github.io/SoftX/VerticalUserArea.css"); */ /* Vertical user area. Moves the mute, defean and settings icons to the server list. | Remove this line to disable. */
+
+:root {
+	/* discord recolor */
+
+	--accentcolor:		185, 15, 40;		/*	blurple		-	default:	88, 101, 242			*/
+	/* --accentcolor2:		185, 15, 40; */			/* boostpink	-	default:	255, 115, 250	*/		
+	--linkcolor:		0, 237, 36;		/*	link		-	default:	0, 176, 244			*/
+
+
+  --channels-width: 300px; /* Width of the channels list. | Default: 300px */
+}
+
+:root {
+    /* random variables */
+    --msg-soft-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3);
+    --msg-drop-soft-shadow: 0px 2px 3px rgba(0, 0, 0, 0.6);
+    --msg-bubble-color: 35, 35, 35;
+}
+
+
+/* user & settings widget */
+/* .container_debb33 {
+    padding-top: 20%;
+} */
+
+
+/* message bubble background (original stolen from DarkPlus By DevEvil) */
+
+/* .cozyMessage__9f4fd .contents_d3ae0d > .markup_a7e664:not(:empty, code) {
+    background-color: rgba(var(--msg-bubble-color));
+    display: inline-block;
+    max-width: 1200px;
+    min-width: 20px;
+    // box-shadow: var(--msg-soft-shadow);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    margin-top: 4px;
+    padding: 12px;
+    padding-right: 14px;
+    border-radius: 12px;
+} */
+
+
+.scroller_e412fe {
+    filter: drop-shadow(var(--msg-drop-soft-shadow));
+}
+
+/* image drop shadow */
+/* .container__62863 {
+    filter: drop-shadow(var(--msg-img-soft-shadow));
+} */
+
+.scrollableContainer_ff917f {
+    /* box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3); */
+    box-shadow: var(--msg-soft-shadow);
+}
+
+
+/* chat fading at the bottom effect */
+.messagesWrapper_add28b:after {
+    position: absolute;
+    bottom: 0;  
+    height: 100%;
+    width: 100%;
+    /* padding-right: 48px!important; */
+    content: "";
+    background: linear-gradient(to top,
+        rgb(var(--backgroundprimary)) 1%, 
+        rgba(var(--backgroundprimary), 0) 4%
+    );
+    pointer-events: none;
+    z-index: 1.1;
+    /* background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 30%, rgb(255, 0, 0)); */
+}
+
+.tier0__2e127 {
+	background: rgb(100, 100, 100) linear-gradient(195deg, rgba(88, 101, 242, 0.9), rgba(88, 101, 242, 0.5));
+} 
+
+
+/* Removing Annoying UI Elements & Nitro Upsells Section */
+
+
+/* server sidebar's "online friends" count */
+
+#vc-friendcount {
+    opacity: 0;
+    transform: rotate(90deg);
+    top: 97%;
+    position: absolute;
+}
+
+ /* nitro profile ad banner */
+
+.container__686c4 {
+    display: none;
+}
+
+/* nitro server profiles setting upsell */
+
+.upsellOverlay__988e7 {
+    display: none;
+}
+
+/* disables nitro custom profile preview */
+/* !!BREAKS VENCORDS FAKE NITRO PROFILE SETUP!! */
+
+.tryItOutSection_d658ca {
+    display: none;
+}
+
+/* nitro gift button, (taken from DarkPlus theme by DevEvil)  */
+
+button[aria-label="Send a gift"] {
+  display: none;
+}
+
+/* .lookInverted_a299dc {
+    color: black;
+} */
+
+/* nitro subscription button in direct messages sidebar */
+.channel__0aef5 .link__3a950[data-list-item-id*="___nitro"] {
+    display: none;
+}
+
+/* nitro shop in direct messages sidebar */
+.channel__0aef5 .link__3a950[data-list-item-id*="___shop"] {
+    display: none;
+}
+
+/* TODO: color YOUR OWN messages with the accent color */
+
+/* .cozyMessage__9f4fd .contents_d3ae0d > .markup_a7e664:not(:empty, code) {
+    background-color: rgba(var(--accentcolor), 0.75);
+    display: inline-block;
+    max-width: 720px;
+    box-shadow: var(--msg-soft-shadow);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 13px;
+    padding-right: 16px;
+    border-radius: 12px;
+} */
+
+/* stop rounding the vc chat like that */
+.wrapper__6bf2d.chatSidebarOpen_f2e544 .callContainer__1477d  {
+    border-radius: 0% !important;
+    z-index: -1;
+}
+
+:root {
+
+	/* 
+        TODO: Center Sidebar Dynamically
+        TODO: merge user area with the server sidebar
+    */
+
+    /* These are settings for server-bar-hide.css */
+	--sb-collapsed-bottom: 22px;
+	--sb-collapsed-top: 0px;
+	--sb-transition-property: bottom;
+
+    /* --sb-top: 72px; */
+    --sb-right: 0.3%;
+    /* --sb-bottom: 0px; */
+    --sb-left: 0.3%;
+
+    --sb-origin: left top;
+    --sb-rotate-bar: 90deg;
+    /* --sb-rotate-bar-inner: 180deg; */
+    --sb-rotate-servers: 90deg;
+
+    /* --sb-bar-top: 0;
+    --sb-bar-left: 100%; */
+    --sb-bar-height: 98.9vw;
+    /* --sb-bar-height: vw; */
+
+
+    --sb-label-left: calc(-50% - 42px);
+    /* --sb-label-top: calc(50% + 40px); */
+
+	--sb-top: 0;
+	--sb-bottom: 86px;
+	--sb-rotate-bar: -90deg;
+	--sb-rotate-bar-inner: none;
+
+	--sb-bar-top: 98%;
+	--sb-bar-left: 0;
+
+	--sb-label-top: calc(-50% - 41px);
+
+	/* These are toggles for server-folders.css (if used) */
+	--bar-toggle-l: 100%;
+	--bar-toggle-r: none;
+
+}
+
+
+/* basic centering stolen from Rag404 (thankies) */
+.scroller_de945b {
+    padding-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+}
+
+
+.tutorialContainer_b06ae6 {
+    justify-content: start;
+}
+
+
+/* .item_f9d377 span[style*="40px"] {
+    width: 200px;
+} */
+
+/* .scroller_de945b [aria-label="Servers"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+} */
+
+/* .scroller_de945b .tutorialContainer_b06ae6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scroller_de945b .listItem__48528 .guildSeparator__75928  {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+}
+
+.scroller_de945b .tutorialContainer__6835f {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
+} */
+
+
+
+.base_c0676e /* friends list, chat */{
+    position: absolute;
+    left: var(--sb-left);
+    top: var(--sb-top);
+    bottom: var(--sb-bottom);
+    right: var(--sb-right);
+}
+.guilds__2b93a.hidden__7c832+.base_c0676e /* hide server bar when fullscreen */{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+.container_d1f8f5 /* wrapper around base and navigation bar */{
+    position: relative;
+}
+
+.baseLayer__2b890 > .container_d1f8f5 { flex-direction: column-reverse }
+
+.guilds__2b93a /* the whole navigation bar */{
+    position: absolute;
+    top: var(--sb-bar-top);
+    left: var(--sb-bar-left);
+    transform-origin: var(--sb-origin);
+    transform: rotate(var(--sb-rotate-bar));
+    height: var(--sb-bar-height);
+	max-height: 99vw;
+}
+
+.guilds__2b93a .scroller_de945b /* the navigation bar */{
+    padding-top: 21px;
+}
+[aria-label="Servers"] > * /* all servers and folders */{
+    margin-top: 10px;
+}
+.guilds__2b93a .listItem__48528 .wrapper__9916c /* folder */{
+    transform: rotate(var(--sb-rotate-servers));
+}
+.guilds__2b93a > * /* Server bar elements */{
+    transform: rotate(var(--sb-rotate-bar-inner));
+}
+div[id^="folder"]>* /* servers in the opened folder */{
+    margin: 8px 0;
+}
+.layer__6b5c3 [aria-label*="Pinned Messages"] > .messagesPopoutWrap__10dd1 /* pinned messages */,
+.layer__6b5c3 [aria-label="Recent Mentions"] /* recent mentions */,
+.layer__6b5c3 [aria-label="Unreads"] /* recent mentions */{
+    max-height: 80vh !important;
+}
+.tooltipRight__2c7a5.tooltip__7b090 /* server name tooltip */{
+    /* box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.50) !important; */
+    box-shadow: var(--msg-soft-shadow) !important;
+    position: relative;
+    left: var(--sb-label-left);
+    transform: translateY(var(--sb-label-top, 0)) !important;
+}
+.tooltipRight__2c7a5>.tooltipPointer_f7411c /* little arrow for tooltip */{
+    opacity: 0;
+}
+.unreadMentionsIndicatorTop__153ad /* new message red popup bottom */,
+.unreadMentionsIndicatorBottom__9351c /* new message red popup bottom */{
+    display: none;
+}

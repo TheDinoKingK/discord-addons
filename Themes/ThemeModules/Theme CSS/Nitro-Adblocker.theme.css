@@ -1,6 +1,6 @@
 /**
  * @name Nitro Adblocker
- * @description An extreme 'adblocker' that removes as many upsells or 'unneccessary' elements related to nitro, this WILL DISABLE some functionality thats related
+ * @description An extreme 'adblocker' that removes as many upsells or 'unneccessary' elements related to nitro & discord, this WILL DISABLE some functionality thats related
  * @author TheDinoKingK
  * @version 0.2.0
  * @authorId 126281924059157154
@@ -9,10 +9,6 @@
  * @source https://notavaliablelmao/
  * @updateUrl https://againnotavaliablelmao/
  */
-
-/* 
-    TODO: hide server boost progress until hovered
-*/
 
 
 /* disables nitro profile ad banner */

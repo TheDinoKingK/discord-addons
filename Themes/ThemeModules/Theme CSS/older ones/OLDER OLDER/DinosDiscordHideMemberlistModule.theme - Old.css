@@ -1,6 +1,6 @@
 /**
- * @name Collapsible Memberlist
- * @description Modifies the memberlist to only fully expand on hover, leaving the avatars visible
+ * @name Collapse Memberlist(OLD VERSION FROM MAY)
+ * @description Modifies the memberlist to only expand on hover, leaving the avatars visible
  * @author TheDinoKingK
  * @version 1.2.0
  * @authorId 126281924059157154
@@ -11,23 +11,21 @@
  */
 
 
-/**
- * TODO: dynamically color role separators 
- * TODO: Refactor code so it works flawlessly in Group chats & threads since the available code for those is different for some reason
-*/
+/** show server memberlist on hover
+ * TODO: dynamically color role seperators */
 
 :root{
     --mb-collapsed-width: 60px;
     --mb-transition-duration: .5s;
 }
 
-.container_cbd271 {
+.container_f79ab4 {
     overflow: hidden !important;
     width: var(--mb-collapsed-width, 240px);
     transition: width var(--mb-transition-duration);
 }
 
-.container_cbd271 .membersWrap_cbd271 {
+.container_f79ab4 .membersWrap__5ca6b {
     overflow: hidden !important;
     min-width: 240px;
     width: var(--mb-collapsed-width, 240px);
@@ -41,7 +39,7 @@
     transition: opacity var(--mb-transition-duration);
 }
 
-.membersGroup_cbd271 {
+.membersGroup_cad095 {
     opacity: 100;
     height: 5px;
     width: 3.1rem;
@@ -51,44 +49,44 @@
     transition: all var(--mb-transition-duration);
 }
 
-.membersGroup_cbd271 span {
+.membersGroup_cad095 span {
     border-top: 3px solid rgba(120,120,120,1);
     overflow: hidden !important;
     transition: all var(--mb-transition-duration);
 }
 
 
-.membersGroup_cbd271 span [alt] {
+.membersGroup_cad095 span [alt] {
     opacity: 0;
     overflow: hidden !important;
     transition: all var(--mb-transition-duration);
 }
 
-.membersGroup_cbd271 span [style*="font-weight"] {
+.membersGroup_cad095 span [style*="font-weight"] {
     opacity: 0;
     overflow: hidden !important;
     transition: all var(--mb-transition-duration);
 }
 
-.content_e9f61e {
+.content_e8a0d1 {
     opacity: 0;
     overflow: hidden !important;
     transition: opacity var(--mb-transition-duration);
 }
 
-.container_cbd271:hover {
+.container_f79ab4:hover {
     width: 240px;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .vc-membercount-member-list {
+.container_f79ab4:hover .vc-membercount-member-list {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 {
+.container_f79ab4:hover .membersGroup_cad095 {
     opacity: 100;
     height: 40px;
     width: 240px;
@@ -97,37 +95,39 @@
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 span {
+.container_f79ab4:hover .membersGroup_cad095 span {
     border-top: 0px solid rgba(120,120,120,0);
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 150ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 span [alt] {
+.container_f79ab4:hover .membersGroup_cad095 span [alt] {
     opacity: 100;
     width: 16;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 span [style*="font-weight"] {
+.container_f79ab4:hover .membersGroup_cad095 span [style*="font-weight"] {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards
 }
 
 
-.container_cbd271:hover .content_e9f61e {
+.container_f79ab4:hover .content_e8a0d1 {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-/* auto-hide fix for Group Chats & Threads */
-/* Temporarily removed due to breaking scrolling in memberlist  */
+/* auto-hide fix for Group Chat Members */
+
+/* UPDATE FIX BECAUSE FOR SOME REASON THE THREAD MEMBERS LIST IS WONKY ASWELL AAAAAAAAAAAAAAA */
+/* TODO: Fix the fix for this somehow breaking the scrolling ability of the memberlist */
 
 
-/* .membersWrap_cbd271 {
+/* .membersWrap__5ca6b {
     overflow: hidden !important;
     min-width: var(--mb-collapsed-width);
     width: var(--mb-collapsed-width, 240px);
@@ -135,19 +135,19 @@
 }
 
 
-.membersWrap_cbd271:hover {
+.membersWrap__5ca6b:hover {
     width: 240px;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.membersWrap_cbd271:hover .vc-membercount-member-list {
+.membersWrap__5ca6b:hover .vc-membercount-member-list {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-h2.membersGroup_cbd271  {
+h2.membersGroup_cad095  {
     opacity: 100;
     height: 5px;
     width: 3.1rem;
@@ -157,7 +157,7 @@ h2.membersGroup_cbd271  {
     transition: all var(--mb-transition-duration);
 }
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 {
+.membersWrap__5ca6b:hover .membersGroup_cad095 {
     opacity: 100;
     height: 40px;
     width: 240px;
@@ -166,58 +166,58 @@ h2.membersGroup_cbd271  {
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.membersWrap_cbd271:hover .content_e9f61e {
+.membersWrap__5ca6b:hover .content_e8a0d1 {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
 
-.hiddenMembers_cbd271 .members_cbd271 {
+.hiddenMembers__0524b .members__573eb {
     / width: var(--mb-collapsed-width); /
     transform: translateX(88px);
     overflow: visible !important;
     transition: all var(--mb-transition-duration);
 } 
 
-.membersWrap_cbd271:not(.hiddenMembers_cbd271) .members_cbd271 {
+.membersWrap__5ca6b:not(.hiddenMembers__0524b) .members__573eb {
     width: var(--mb-collapsed-width);
     overflow: visible !important;
     transition: all var(--mb-transition-duration);
 } 
 
 
-.membersWrap_cbd271:hover .members_cbd271 {
+.membersWrap__5ca6b:hover .members__573eb {
     transform: translateX(0px);
     transition: all var(--mb-transition-duration);
 } 
 
-.membersWrap_cbd271:not(.hiddenMembers_cbd271):hover .members_cbd271 {
+.membersWrap__5ca6b:not(.hiddenMembers__0524b):hover .members__573eb {
     width: 240px;
     transition: all var(--mb-transition-duration);
 } 
 
 
-.container_cbd271 .members_cbd271 {
+.container_f79ab4 .members__573eb {
     transform: translateX(0px);
     width: 240px;
 } 
 
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 span {
+.membersWrap__5ca6b:hover .membersGroup_cad095 span {
     border-top: 0px solid rgba(120,120,120,0);
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 150ms forwards 
 }
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 span [alt] {
+.membersWrap__5ca6b:hover .membersGroup_cad095 span [alt] {
     opacity: 100;
     width: 16;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 span [style*="font-weight"] {
+.membersWrap__5ca6b:hover .membersGroup_cad095 span [style*="font-weight"] {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards

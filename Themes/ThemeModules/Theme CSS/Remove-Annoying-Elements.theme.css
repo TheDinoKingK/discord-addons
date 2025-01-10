@@ -1,0 +1,16 @@
+
+
+/* Hides Audio Codec setting since there's nothing to change in it for me */
+
+
+/* Hides Krisp info card Since its particularly useless besides providing information on what krisp is */
+
+
+/* Hides annoying new "activity" tab in members list (why is there no option to remove it??) */
+div[class="container_c64476 openOnHover_c64476"]:has(div) {
+    display: none;
+}
+
+h3:has(.headerContainer_bc6acb) {
+    display: none;
+}
