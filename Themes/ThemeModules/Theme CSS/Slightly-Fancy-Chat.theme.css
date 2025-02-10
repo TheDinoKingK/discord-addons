@@ -2,7 +2,7 @@
  * @name (Slightly) Fancy Chat
  * @description A few small tweaks to the chat so it looks prettier (mainly message bubbles & dropshadows)
  * @author TheDinoKingK
- * @version 1.0.5
+ * @version 1.0.6
  * @authorId 126281924059157154
  * @donate https://kofidontworkyet/
  * @website https://TheDinoKing.com/
@@ -22,7 +22,7 @@
 
 /* message bubble background (original code stolen from DarkPlus By DevEvil) */
 
-.cozyMessage_d5deea .contents_ec86aa > .markup_d6076c:not(:empty, code) {
+.cozyMessage__5126c .contents_c19a55 > .markup__75297:not(:empty, code) {
     background-color: rgba(var(--msg-bubble-color));
     display: inline-block;
     max-width: 1200px;
@@ -39,17 +39,17 @@
 }
 
 /* Adds a dropshadow to literally everything in the chat history */
-.scroller_e2e187 {
+.scroller__36d07 {
     filter: drop-shadow(var(--msg-drop-soft-shadow));
 }
 
 /* image drop shadow */
-/* .container_b558d0 {
+/* .container_b7e1cb {
     filter: drop-shadow(var(--msg-img-soft-shadow));
 } */
 
 /* Adds a dropshadow to the message box */
-.scrollableContainer_d0696b {
+.scrollableContainer__74017 {
     /* box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3); */
     box-shadow: var(--msg-soft-shadow);
 }
@@ -57,7 +57,7 @@
 
 /* chat fading at the bottom effect */
 
-.messagesWrapper_e2e187:after {
+.messagesWrapper__36d07:after {
     position: absolute;
     bottom: 0;  
     height: 100%;

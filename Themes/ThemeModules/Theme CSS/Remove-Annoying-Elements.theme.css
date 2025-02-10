@@ -1,16 +1,27 @@
 
 
 /* Hides Audio Codec setting since there's nothing to change in it for me */
+.marginBottom20_fd297e:has(h4[id=":raa:"]) {
+    display: none;
+}
 
+/* Hides video background options since it takes up too much screen-space & I don't use it */
+.spacingTop24_f22a74:has(h4[id=":ra8:"]) {
+    display: none;
+}
 
 /* Hides Krisp info card Since its particularly useless besides providing information on what krisp is */
-
+.formNotice_f43ba5:has(img[src="/assets/e9ed313dde26d91b.svg"]) {
+    display: none;
+}
 
 /* Hides annoying new "activity" tab in members list (why is there no option to remove it??) */
-div[class="container_c64476 openOnHover_c64476"]:has(div) {
+div[class="container__0f2e8 openOnHover__0f2e8"]:has(div) {
     display: none;
 }
 
-h3:has(.headerContainer_bc6acb) {
+h3:has(.headerContainer__095fe) {
     display: none;
 }
+
+

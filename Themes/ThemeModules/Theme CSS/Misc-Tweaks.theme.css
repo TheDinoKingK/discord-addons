@@ -2,13 +2,15 @@
  * @name Miscellaneous Tweaks
  * @description Smaller tweaks that are either highly experimental or only for my own taste
  * @author TheDinoKingK
- * @version 0.0.1
+ * @version 0.0.2
  * @authorId 126281924059157154
  * @donate https://kofidontworkyet/
  * @website https://TheDinoKing.com/
  * @source https://notavaliablelmao/
  * @updateUrl https://againnotavaliablelmao/
  */
+
+ /* TODO Fix user & settings pop-up offset */
 
 
 /* recolor discord accent to red with blurple recolor*/
@@ -30,22 +32,24 @@
 }
 
 
+
+
 /* user & settings widget */
-/* .container_b2ca13 {
+/* .container__37e49 {
 
 } */
-/* .panels_a4d4d9 {
+/* .panels_c48ade {
 
 } */
 
 
 /* offset user profile popup to account for moved server list */
-/* .accountProfilePopoutWrapper_b2ca13 {
+/* .accountProfilePopoutWrapper__37e49 {
 	transform: translateX(21px);
 } */
 
 /* fix side affect of online status dropdown going wacko from the user profile popoff offset */
-/* .submenuPaddingContainer_d90b3d {
+/* .submenuPaddingContainer_c1e9c4 {
 	transform: translate(-10px, -328px);
 	width: 320px;
 	height: 231.68px;
@@ -53,12 +57,12 @@
 
 
 /* I dont remember what this did */
-.tier0_c87d73 {
+.tier0_ac86f6 {
 	background: rgb(100, 100, 100) linear-gradient(195deg, rgba(88, 101, 242, 0.9), rgba(88, 101, 242, 0.5));
 } 
 
 /* stop rounding the vc chat like that */
-.wrapper_d880dc.chatSidebarOpen_d880dc .callContainer_d880dc  {
+.wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592  {
     border-radius: 0% !important;
     z-index: -1;
 }

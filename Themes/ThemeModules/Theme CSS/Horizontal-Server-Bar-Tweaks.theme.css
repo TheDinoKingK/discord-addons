@@ -2,7 +2,7 @@
  * @name Bottom Aligned Server Bar
  * @description Currently modifies mrtipson's server-bar css to anchor to the bottom of the window, along with some other tweaks
  * @author TheDinoKingK
- * @version 1.0.5
+ * @version 1.0.6
  * @authorId 126281924059157154
  * @donate https://kofidontworkyet/
  * @website https://TheDinoKing.com/
@@ -68,7 +68,7 @@
 
 
 /* basic centering stolen from Rag404 (thankies) */
-.scroller_fea3ef {
+.scroller_ef3116 {
     padding-bottom: 21px;
     display: flex;
     flex-direction: column;
@@ -76,34 +76,34 @@
 }
 
 
-.tutorialContainer_f9623d {
+.tutorialContainer__1f388 {
     justify-content: start;
 }
 
 
-/* .item_fd07a3 span[style*="40px"] {
+/* .item__58105 span[style*="40px"] {
     width: 200px;
 } */
 
-/* .scroller_fea3ef [aria-label="Servers"] {
+/* .scroller_ef3116 [aria-label="Servers"] {
     display: flex;
     flex-direction: column;
     justify-content: safe center;
 } */
 
-/* .scroller_fea3ef .tutorialContainer_f9623d {
+/* .scroller_ef3116 .tutorialContainer__1f388 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.scroller_fea3ef .listItem_c96c45 .guildSeparator_d0c57e  {
+.scroller_ef3116 .listItem__650eb .guildSeparator__252b6  {
     display: flex;
     flex-direction: column;
     justify-content: safe center;
 }
 
-.scroller_fea3ef .tutorialContainer_c96c45 {
+.scroller_ef3116 .tutorialContainer__650eb {
     display: flex;
     flex-direction: column;
     justify-content: safe center;
@@ -111,14 +111,14 @@
 
 
 
-.base_a4d4d9 /* friends list, chat */{
+.base_c48ade /* friends list, chat */{
     position: absolute;
     left: var(--sb-left);
     top: var(--sb-top);
     bottom: var(--sb-bottom);
     right: var(--sb-right);
 }
-.guilds_a4d4d9.hidden_fea3ef+.base_a4d4d9 /* hide server bar when fullscreen */{
+.guilds_c48ade.hidden_ef3116+.base_c48ade /* hide server bar when fullscreen */{
     position: absolute;
     top: 0;
     left: 0;
@@ -126,13 +126,13 @@
     right: 0;
     height: 100%;
 }
-.container_a4d4d9 /* wrapper around base and navigation bar */{
+.container_c48ade /* wrapper around base and navigation bar */{
     position: relative;
 }
 
-.baseLayer_d4b6c5 > .container_a4d4d9 { flex-direction: column-reverse }
+.baseLayer__960e4 > .container_c48ade { flex-direction: column-reverse }
 
-.guilds_a4d4d9 /* the whole navigation bar */{
+.guilds_c48ade /* the whole navigation bar */{
     position: absolute;
     top: var(--sb-bar-top);
     left: var(--sb-bar-left);
@@ -142,51 +142,51 @@
 	max-height: 99vw;
 }
 
-.guilds_a4d4d9 .scroller_fea3ef /* the navigation bar */{
+.guilds_c48ade .scroller_ef3116 /* the navigation bar */{
     padding-top: 21px;
 }
 [aria-label="Servers"] > * /* all servers and folders */{
     margin-top: 10px;
 }
-.guilds_a4d4d9 .listItem_c96c45 .wrapper_c5f96a /* folder */{
+.guilds_c48ade .listItem__650eb .wrapper_cc5dd2 /* folder */{
     transform: rotate(var(--sb-rotate-servers));
 }
-.guilds_a4d4d9 > * /* Server bar elements */{
+.guilds_c48ade > * /* Server bar elements */{
     transform: rotate(var(--sb-rotate-bar-inner));
 }
 div[id^="folder"]>* /* servers in the opened folder */{
     margin: 8px 0;
 }
-.layer_cd0de5 [aria-label*="Pinned Messages"] > .messagesPopoutWrap_ac90a2 /* pinned messages */,
-.layer_cd0de5 [aria-label="Recent Mentions"] /* recent mentions */,
-.layer_cd0de5 [aria-label="Unreads"] /* recent mentions */{
+.layer_da8173 [aria-label*="Pinned Messages"] > .messagesPopoutWrap__45690 /* pinned messages */,
+.layer_da8173 [aria-label="Recent Mentions"] /* recent mentions */,
+.layer_da8173 [aria-label="Unreads"] /* recent mentions */{
     max-height: 80vh !important;
 }
-.tooltipRight_b6c360.tooltip_b6c360 /* server name tooltip */{
+.tooltipRight__382e7.tooltip__382e7 /* server name tooltip */{
     /* box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.50) !important; */
     box-shadow: var(--msg-soft-shadow) !important;
     position: relative;
     left: var(--sb-label-left);
     transform: translateY(var(--sb-label-top, 0)) !important;
 }
-.tooltipRight_b6c360>.tooltipPointer_b6c360 /* little arrow for tooltip */{
+.tooltipRight__382e7>.tooltipPointer__382e7 /* little arrow for tooltip */{
     opacity: 0;
 }
-.unreadMentionsIndicatorTop_fea3ef /* new message red popup bottom */,
-.unreadMentionsIndicatorBottom_fea3ef /* new message red popup bottom */{
+.unreadMentionsIndicatorTop_ef3116 /* new message red popup bottom */,
+.unreadMentionsIndicatorBottom_ef3116 /* new message red popup bottom */{
     display: none;
 }
 
-.itemsContainer_fea3ef {
+.itemsContainer_ef3116 {
     justify-content: safe center;
 }
 
 
 /* hacky centering fix for now */
-.footer_d71945 {
+.footer__214dc {
     position: absolute;
     transform: translatey(48vw);
 }
-.footer_d71945 .listItem_c96c45 {
+.footer__214dc .listItem__650eb {
     padding-bottom: 1vw;
 }

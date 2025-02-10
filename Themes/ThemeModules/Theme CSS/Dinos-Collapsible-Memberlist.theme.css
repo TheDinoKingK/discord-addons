@@ -2,7 +2,7 @@
  * @name Collapsible Memberlist
  * @description Modifies the memberlist to only fully expand on hover, leaving the avatars visible
  * @author TheDinoKingK
- * @version 1.2.0
+ * @version 1.2.1
  * @authorId 126281924059157154
  * @donate https://kofidontworkyet/
  * @website https://TheDinoKing.com/
@@ -13,7 +13,8 @@
 
 /**
  * TODO: dynamically color role separators 
- * TODO: Refactor code so it works flawlessly in Group chats & threads since the available code for those is different for some reason
+ * TODO: Refactor code so it works flawlessly in threads since the available code for those is different for some reason
+ * TODO: add similar functionality to DM profile sidebar
 */
 
 :root{
@@ -21,13 +22,13 @@
     --mb-transition-duration: .5s;
 }
 
-.container_cbd271 {
+.container_c8ffbb {
     overflow: hidden !important;
     width: var(--mb-collapsed-width, 240px);
     transition: width var(--mb-transition-duration);
 }
 
-.container_cbd271 .membersWrap_cbd271 {
+.container_c8ffbb .membersWrap_c8ffbb {
     overflow: hidden !important;
     min-width: 240px;
     width: var(--mb-collapsed-width, 240px);
@@ -41,7 +42,7 @@
     transition: opacity var(--mb-transition-duration);
 }
 
-.membersGroup_cbd271 {
+.membersGroup_c8ffbb {
     opacity: 100;
     height: 5px;
     width: 3.1rem;
@@ -51,44 +52,44 @@
     transition: all var(--mb-transition-duration);
 }
 
-.membersGroup_cbd271 span {
+.membersGroup_c8ffbb span {
     border-top: 3px solid rgba(120,120,120,1);
     overflow: hidden !important;
     transition: all var(--mb-transition-duration);
 }
 
 
-.membersGroup_cbd271 span [alt] {
+.membersGroup_c8ffbb span [alt] {
     opacity: 0;
     overflow: hidden !important;
     transition: all var(--mb-transition-duration);
 }
 
-.membersGroup_cbd271 span [style*="font-weight"] {
+.membersGroup_c8ffbb span [style*="font-weight"] {
     opacity: 0;
     overflow: hidden !important;
     transition: all var(--mb-transition-duration);
 }
 
-.content_e9f61e {
+.content__91a9d {
     opacity: 0;
     overflow: hidden !important;
     transition: opacity var(--mb-transition-duration);
 }
 
-.container_cbd271:hover {
+.container_c8ffbb:hover {
     width: 240px;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .vc-membercount-member-list {
+.container_c8ffbb:hover .vc-membercount-member-list {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 {
+.container_c8ffbb:hover .membersGroup_c8ffbb {
     opacity: 100;
     height: 40px;
     width: 240px;
@@ -97,27 +98,27 @@
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 span {
+.container_c8ffbb:hover .membersGroup_c8ffbb span {
     border-top: 0px solid rgba(120,120,120,0);
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 150ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 span [alt] {
+.container_c8ffbb:hover .membersGroup_c8ffbb span [alt] {
     opacity: 100;
     width: 16;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.container_cbd271:hover .membersGroup_cbd271 span [style*="font-weight"] {
+.container_c8ffbb:hover .membersGroup_c8ffbb span [style*="font-weight"] {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards
 }
 
 
-.container_cbd271:hover .content_e9f61e {
+.container_c8ffbb:hover .content__91a9d {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
@@ -127,7 +128,7 @@
 /* Temporarily removed due to breaking scrolling in memberlist  */
 
 
-/* .membersWrap_cbd271 {
+/* .membersWrap_c8ffbb {
     overflow: hidden !important;
     min-width: var(--mb-collapsed-width);
     width: var(--mb-collapsed-width, 240px);
@@ -135,19 +136,19 @@
 }
 
 
-.membersWrap_cbd271:hover {
+.membersWrap_c8ffbb:hover {
     width: 240px;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.membersWrap_cbd271:hover .vc-membercount-member-list {
+.membersWrap_c8ffbb:hover .vc-membercount-member-list {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-h2.membersGroup_cbd271  {
+h2.membersGroup_c8ffbb  {
     opacity: 100;
     height: 5px;
     width: 3.1rem;
@@ -157,7 +158,7 @@ h2.membersGroup_cbd271  {
     transition: all var(--mb-transition-duration);
 }
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 {
+.membersWrap_c8ffbb:hover .membersGroup_c8ffbb {
     opacity: 100;
     height: 40px;
     width: 240px;
@@ -166,58 +167,58 @@ h2.membersGroup_cbd271  {
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.membersWrap_cbd271:hover .content_e9f61e {
+.membersWrap_c8ffbb:hover .content__91a9d {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
 
-.hiddenMembers_cbd271 .members_cbd271 {
+.hiddenMembers_c8ffbb .members_c8ffbb {
     / width: var(--mb-collapsed-width); /
     transform: translateX(88px);
     overflow: visible !important;
     transition: all var(--mb-transition-duration);
 } 
 
-.membersWrap_cbd271:not(.hiddenMembers_cbd271) .members_cbd271 {
+.membersWrap_c8ffbb:not(.hiddenMembers_c8ffbb) .members_c8ffbb {
     width: var(--mb-collapsed-width);
     overflow: visible !important;
     transition: all var(--mb-transition-duration);
 } 
 
 
-.membersWrap_cbd271:hover .members_cbd271 {
+.membersWrap_c8ffbb:hover .members_c8ffbb {
     transform: translateX(0px);
     transition: all var(--mb-transition-duration);
 } 
 
-.membersWrap_cbd271:not(.hiddenMembers_cbd271):hover .members_cbd271 {
+.membersWrap_c8ffbb:not(.hiddenMembers_c8ffbb):hover .members_c8ffbb {
     width: 240px;
     transition: all var(--mb-transition-duration);
 } 
 
 
-.container_cbd271 .members_cbd271 {
+.container_c8ffbb .members_c8ffbb {
     transform: translateX(0px);
     width: 240px;
 } 
 
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 span {
+.membersWrap_c8ffbb:hover .membersGroup_c8ffbb span {
     border-top: 0px solid rgba(120,120,120,0);
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 150ms forwards 
 }
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 span [alt] {
+.membersWrap_c8ffbb:hover .membersGroup_c8ffbb span [alt] {
     opacity: 100;
     width: 16;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards 
 }
 
-.membersWrap_cbd271:hover .membersGroup_cbd271 span [style*="font-weight"] {
+.membersWrap_c8ffbb:hover .membersGroup_c8ffbb span [style*="font-weight"] {
     opacity: 100;
     overflow: visible !important;
     animation: server-bar-overflow 0s linear 250ms forwards

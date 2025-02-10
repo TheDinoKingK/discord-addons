@@ -2,7 +2,7 @@
  * @name Nitro Adblocker
  * @description An extreme 'adblocker' that removes as many upsells or 'unneccessary' elements related to nitro & discord, this WILL DISABLE some functionality thats related
  * @author TheDinoKingK
- * @version 0.2.0
+ * @version 0.2.1
  * @authorId 126281924059157154
  * @donate https://kofidontworkyet/
  * @website https://TheDinoKing.com/
@@ -13,7 +13,15 @@
 
 /* disables nitro profile ad banner */
 
-.container_da1432 {
+.container__8279f {
+    display: none;
+}
+
+.upsellContainer__5997d {
+    display: none;
+}
+
+.upsellContainer__0b69f {
     display: none;
 }
 
@@ -26,7 +34,7 @@
 /* disables nitro custom profile preview */
 /* !!BREAKS VENCORDS FAKE NITRO PROFILE SETUP!! */
 
-.tryItOutSection_eb2d2c {
+.premiumFeatureBorder__65c15 {
     display: none;
 }
 
@@ -38,42 +46,42 @@ button[aria-label="Send a gift"] {
 
 /* disables nitro subscription button in direct messages sidebar */
 
-.channel_c91bad .link_c91bad[data-list-item-id*="___nitro"] {
+.channel__972a0 .link__972a0[data-list-item-id*="___nitro"] {
     display: none;
 }
 
 /* disables nitro shop in direct messages sidebar */
 
-.channel_c91bad .link_c91bad[data-list-item-id*="___shop"] {
+.channel__972a0 .link__972a0[data-list-item-id*="___shop"] {
     display: none;
 }
 
 /* disables nitro button in the billing settings */
 
-.premiumTab_c10c74[data-tab-id="Discord Nitro"] {
+.item_b3f026[data-tab-id="Discord Nitro"] {
     display: none;
 }
 
 /* disables nitro server boost button in the billing settings */
 
-.item_a0[data-tab-id="Nitro Server Boost"] {
+.item_b3f026[data-tab-id="Nitro Server Boost"] {
     display: none;
 }
 
 /* disables gift inventory button in the billing settings */
 
-.item_a0[data-tab-id="Library Inventory"] {
+.item_b3f026[data-tab-id="Library Inventory"] {
     display: none;
 }
 
 /* disables discord merch store link in settings */
 
-.item_a0[data-tab-id="merchandise"] {
+.item_b3f026[data-tab-id="merchandise"] {
     display: none;
 }
 
 /* disables discord social media links in settings (why is this here anyway?) */
 
-.socialLinks_c44e94 {
+.socialLinks__7df54 {
     display: none;
 }
