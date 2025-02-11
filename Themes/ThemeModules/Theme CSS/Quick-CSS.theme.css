@@ -1,0 +1,131 @@
+@import url(https://nspc911.github.io/vc-themes/SeamlessChatBar.theme.css);
+@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/StageRecolor.css");
+/* @import url("https://raw.githubusercontent.com/NSPC911/vc-themes/refs/heads/main/snippets/SeamlessChatBar.theme.css"); */
+
+
+
+/* Make Delete/Logout Buttons Red */
+[class^=item_][data-tab-id="DELETE"],
+[class^=item_][data-tab-id="logout"] {
+    color: var(--info-danger-foreground) !important;
+}
+[class^=item_][data-tab-id="DELETE"]:hover,
+[class^=item_][data-tab-id="logout"]:hover {
+    background-color: var(--info-danger-background) !important;
+}
+
+/*     Blue Pill      */
+[class^="iconVisibility_"]:has([style="color: var(--text-brand);"]) > [class^="unread_"] {
+  background-color: var(--text-brand);
+}
+/*     Red Pill      */
+[class^="iconVisibility_"]:has([class^="mentionsBadge_"]) > [class^="unread_"] {
+  background-color: var(--status-danger);
+}
+
+/*     Modernized audio attachments      */
+[class^="mosaicItem"] > [class^="wrapperAudio"] > [class^="audioMetadata"] {
+  margin-bottom: 24px;
+}
+[class^="mosaicItem"] > [class^="wrapperAudio"] > [class^="audioControls"] {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+
+[class^=panels] > [class^=container] /* User area redesign */
+{
+    height: unset !important; /* Height being dynamic is fine */
+    align-items: unset !important; /* Don't need that */
+    padding: 6px 8px !important; /* Let those boxes breathe */
+    flex-direction: column !important; /* instead of going one next to the other, go stacked */
+    gap: 2px !important; /* Again let them breathe */
+}
+
+[class^=avatarWrapper] /* Change the user box */
+{
+    margin-right: unset !important; /* Useless */
+    margin-left: unset !important; /* Useless */
+    padding-left: 4px !important; /* Make it slightly bigger for consistency with the right side */
+}
+
+[class^=container] > [class*=buttons] /* Change the quick actions */
+{
+    justify-content: space-evenly !important; /* Let them breathe */
+}
+
+[class*="modeMuted_"]:has([class^="icon_"]) [class^="name_"] {
+    color: var(--channel-icon);
+    opacity: 40%;
+}
+
+
+
+img[class="emoji otherEmoji_e58351"]:hover {
+  transform: scale(2);
+}
+
+
+/* fix vencord plugin notes being clipped from rounding */
+.vc-addon-note {
+  border-radius: 0px !important;
+}
+
+
+/* Original code snippet from NSPC911, fixes issues with for vc-better-folders & horizontal serverbar */
+
+:root {
+    --bfhsl-make-folder-hover: 0 /* set to 1 if you want it to hover */
+}
+
+[class*=container]:has(> [aria-label="Servers sidebar"]) {
+    [class^=listItem]:has([class^=guildSeparator]) {
+        display: none;
+    }
+    [class^=folderEndWrapper] {
+        display: none;
+    }
+    > div > nav {
+        bottom: 100px;
+        transform: rotate(-90deg) translateX(88px) !important;
+        animation: folder-up 0.7s ease-in-out forwards !important;
+        z-index: 0;
+        box-shadow: calc(-10px * (0 + var(--bfhsl-make-folder-hover))) 0px calc(10px * (0 + var(--bfhsl-make-folder-hover))) 0 black;
+    }
+    &:has(> div > nav) > [class^=base] {
+        margin-bottom: calc(89px * (1 - var(--bfhsl-make-folder-hover))) !important;
+        transition: margin-bottom 0.5s ease-in-out;
+    }
+}
+
+@keyframes folder-up {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 72px;
+    }
+}
+
+/* removes discover button in server bar. */
+.footer__214dc {
+    display: none;
+}
+
+
+/* Hide Chetbox when not able to type, created by mwlica */
+
+[class*=channelTextAreaDisabled] {
+    display: none!important;
+}
+
+/* or if it doesn't work like because of themes: */
+[class*=channelTextAreaDisabled] {
+    opacity: 0!important;
+    position: absolute!important;
+    height: 0px!important;
+    width: 0px!important;
+    z-index: 0!important;
+}

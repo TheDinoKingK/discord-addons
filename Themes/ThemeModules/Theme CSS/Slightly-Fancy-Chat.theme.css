@@ -22,12 +22,13 @@
 
 /* message bubble background (original code stolen from DarkPlus By DevEvil) */
 
+/*
 .cozyMessage__5126c .contents_c19a55 > .markup__75297:not(:empty, code) {
     background-color: rgba(var(--msg-bubble-color));
     display: inline-block;
     max-width: 1200px;
     min-width: 20px;
-    /* box-shadow: var(--msg-soft-shadow); */
+    /* box-shadow: var(--msg-soft-shadow);
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -36,7 +37,8 @@
     padding: 12px;
     padding-right: 14px;
     border-radius: 12px;
-}
+} 
+*/
 
 /* Adds a dropshadow to literally everything in the chat history */
 .scroller__36d07 {

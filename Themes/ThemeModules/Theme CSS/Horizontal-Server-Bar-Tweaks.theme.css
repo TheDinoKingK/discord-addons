@@ -36,6 +36,8 @@
 
     /* --sb-bar-top: 0;
     --sb-bar-left: 100%; */
+    
+    /* TDOO: fix end length because it doesnt dynamically scale for padding */
     --sb-bar-height: 98.9vw;
     /* --sb-bar-height: vw; */
 
