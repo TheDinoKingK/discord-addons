@@ -13,6 +13,45 @@
  /* TODO Fix user & settings pop-up offset */
 
 
+/* fixes for Rounded Discord theme */
+@import url("https://markchan0225.github.io/RoundedDiscord/RoundedDiscord.theme.css");
+
+	/* Horizontal Server bar fix
+	THIS PART ISNT CONSISTENT */
+	:root {
+		--sb-bar-height: 98.7vw !important;
+		--sb-bottom: 86px !important;
+	}
+	.wrapper_ef3116 {
+		margin: -10px 5px 10px 10px !important;
+	}
+
+	[class*=container]:has(> [aria-label="Servers sidebar"]) {
+		[class^=folderEndWrapper] {
+			display: none;
+		}
+		> div > nav {
+			transform: rotate(-90deg) translateX(82px) !important;
+		}
+		&:has(> div > nav) > [class^=base] {
+			margin-bottom: calc(83px * (1 - var(--bfhsl-make-folder-hover))) !important;
+		}
+	}
+
+	/* stop rounding the vc chat like that */
+	.wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592  {
+		border-radius: 0% !important;
+		z-index: -1;
+	}
+
+	/* Disables vencord plugin & theme notes getting clipped by discord theme rounding */
+	:is(.vc-settings-theme-grid, .vc-plugins-grid) .vc-addon-card .vc-addon-note {
+		border-radius: 0px !important;
+	}
+
+
+
+
 /* recolor discord accent to red with blurple recolor*/
 /* @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css); */
 
@@ -23,16 +62,10 @@
 :root {
 	/* discord recolor */
 
-	/* --accentcolor:		185, 15, 40;			blurple		-	default:	88, 101, 242			 */
-	/* --accentcolor2:		185, 15, 40; */			/* boostpink	-	default:	255, 115, 250	*/		
-	/* --linkcolor:		0, 237, 36;			link		-	default:	0, 176, 244			 */
-
-
-    --channels-width: 300px; /* Width of the channels list. | Default: 300px */
+	--accentcolor:		202, 33, 44;			/* blurple		-	default:	88, 101, 242 */			
+	--accentcolor2:		202, 33, 44;			/* boostpink	-	default:	255, 115, 250 */			
+	--linkcolor:		0, 237, 36;			/* link		-	default:	0, 176, 244 */			
 }
-
-
-
 
 /* user & settings widget */
 /* .container__37e49 {
@@ -42,32 +75,9 @@
 
 } */
 
-
-/* offset user profile popup to account for moved server list */
-/* .accountProfilePopoutWrapper__37e49 {
-	transform: translateX(21px);
-} */
-
 /* fix side affect of online status dropdown going wacko from the user profile popoff offset */
 /* .submenuPaddingContainer_c1e9c4 {
 	transform: translate(-10px, -328px);
 	width: 320px;
 	height: 231.68px;
 } */
-
-
-/* I dont remember what this did */
-.tier0_ac86f6 {
-	background: rgb(100, 100, 100) linear-gradient(195deg, rgba(88, 101, 242, 0.9), rgba(88, 101, 242, 0.5));
-} 
-
-/* stop rounding the vc chat like that */
-.wrapper_cb9592.sidebarOpen_cb9592 .callContainer_cb9592  {
-    border-radius: 0% !important;
-    z-index: -1;
-}
-
-/* Disables vencord plugin & theme notes getting clipped by discord theme rounding */
-:is(.vc-settings-theme-grid, .vc-plugins-grid) .vc-addon-card .vc-addon-note {
-    border-radius: 0px !important;
-}

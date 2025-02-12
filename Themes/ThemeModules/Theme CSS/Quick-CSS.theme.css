@@ -62,58 +62,9 @@
 }
 
 
-
 img[class="emoji otherEmoji_e58351"]:hover {
   transform: scale(2);
 }
-
-
-/* fix vencord plugin notes being clipped from rounding */
-.vc-addon-note {
-  border-radius: 0px !important;
-}
-
-
-/* Original code snippet from NSPC911, fixes issues with for vc-better-folders & horizontal serverbar */
-
-:root {
-    --bfhsl-make-folder-hover: 0 /* set to 1 if you want it to hover */
-}
-
-[class*=container]:has(> [aria-label="Servers sidebar"]) {
-    [class^=listItem]:has([class^=guildSeparator]) {
-        display: none;
-    }
-    [class^=folderEndWrapper] {
-        display: none;
-    }
-    > div > nav {
-        bottom: 100px;
-        transform: rotate(-90deg) translateX(88px) !important;
-        animation: folder-up 0.7s ease-in-out forwards !important;
-        z-index: 0;
-        box-shadow: calc(-10px * (0 + var(--bfhsl-make-folder-hover))) 0px calc(10px * (0 + var(--bfhsl-make-folder-hover))) 0 black;
-    }
-    &:has(> div > nav) > [class^=base] {
-        margin-bottom: calc(89px * (1 - var(--bfhsl-make-folder-hover))) !important;
-        transition: margin-bottom 0.5s ease-in-out;
-    }
-}
-
-@keyframes folder-up {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 72px;
-    }
-}
-
-/* removes discover button in server bar. */
-.footer__214dc {
-    display: none;
-}
-
 
 /* Hide Chetbox when not able to type, created by mwlica */
 

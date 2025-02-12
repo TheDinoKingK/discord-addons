@@ -24,4 +24,12 @@ h3:has(.headerContainer__095fe) {
     display: none;
 }
 
+/* Hides "play again" for mini-games in the dms panel */
+.container__675e5:has(div[aria-label*="Putt Party"]) {
+    display: none;
+}
 
+/* Hide discover button in server bar. */
+.footer__214dc {
+    display: none;
+}

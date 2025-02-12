@@ -38,7 +38,7 @@ for example the annoying activity card in the server members list that takes up 
 
 
 ## Bottom Horizontal Server Bar
-Currently this is simply an edit of [mrTipsons](https://github.com/MrTipson) ["horizontal server bar" code](https://github.com/MrTipson/DiscordCSS/blob/master/css/server-bar.css) to anchor itself to the bottom of the screen along with being centered(with the help of [Rag404](https://github.com/Rag404))
+Currently this is simply an edit of [mrTipsons](https://github.com/MrTipson) ["horizontal server bar" code](https://github.com/MrTipson/DiscordCSS/blob/master/css/server-bar.css) to anchor itself to the bottom of the screen along with being centered(with the help of [Rag404](https://github.com/Rag404) and support betterFolders properly (using [NSPC911's](https://github.com/NSPC911) code)))
 I plan to modify it further and anchor other elements to this aswell, but for now it works fine for me :D
 
 

@@ -2,7 +2,7 @@
  * @name Bottom Aligned Server Bar
  * @description Currently modifies mrtipson's server-bar css to anchor to the bottom of the window, along with some other tweaks
  * @author TheDinoKingK
- * @version 1.0.6
+ * @version 1.0.8
  * @authorId 126281924059157154
  * @donate https://kofidontworkyet/
  * @website https://TheDinoKing.com/
@@ -15,6 +15,8 @@
     TODO: merge user area with the server sidebar
     TODO: fix server label hover height drastically changing due to differing scales
     TODO: automatically scale element down when not in use (might not implement)
+    TDOO: fix end length because it doesnt dynamically scale for padding (--sb-bar-height)
+    TODO: HOLY CRAp MY POSITIONING IS HORRIBLE I NEED TO FIX THE PADDING LOL
 */
 
 :root {
@@ -24,34 +26,27 @@
 	--sb-collapsed-top: 0px;
 	--sb-transition-property: bottom;
 
-    /* --sb-top: 72px; */
+    --sb-top: 0;
     --sb-right: 0.3%;
-    /* --sb-bottom: 0px; */
     --sb-left: 0.3%;
 
     --sb-origin: left top;
     --sb-rotate-bar: 90deg;
-    /* --sb-rotate-bar-inner: 180deg; */
+    --sb-rotate-bar-inner: none;
     --sb-rotate-servers: 90deg;
-
-    /* --sb-bar-top: 0;
-    --sb-bar-left: 100%; */
-    
-    /* TDOO: fix end length because it doesnt dynamically scale for padding */
-    --sb-bar-height: 98.9vw;
-    /* --sb-bar-height: vw; */
 
 
     --sb-label-left: calc(-50% - 42px);
     /* --sb-label-top: calc(50% + 40px); */
 	--sb-label-top: calc(-50% - 41px);
 
-	--sb-top: 0;
-	--sb-bottom: 86px;
+	--sb-bottom: 72px;
 	--sb-rotate-bar: -90deg;
 	--sb-rotate-bar-inner: none;
 
-	--sb-bar-top: 98%;
+    --sb-bar-height: 100vw;
+
+	--sb-bar-top: 100%;
 	--sb-bar-left: 0;
 
 	/* These are toggles for server-folders.css (if used) */
@@ -80,6 +75,36 @@
 
 .tutorialContainer__1f388 {
     justify-content: start;
+}
+
+
+/* offset user profile popup to account for moved server list */
+.accountProfilePopoutWrapper__37e49 {
+	transform: translateX(19px);
+}
+
+/* Fixes vc-better-folders & horizontal serverbar not working properly, Original code snippet from NSPC911  */
+
+:root {
+    --bfhsl-make-folder-hover: 0 /* set to 1 if you want it to hover */
+}
+
+[class*=container]:has(> [aria-label="Servers sidebar"]) {
+    [class^=listItem]:has([class^=guildSeparator]) {
+        display: none;
+    }
+    [class^=folderEndWrapper] {
+        display: none;
+    }
+    > div > nav {
+        bottom: 100px;
+        transform: rotate(-90deg) translateX(70px) !important;
+        z-index: 0;
+        box-shadow: calc(-10px * (0 + var(--bfhsl-make-folder-hover))) 0px calc(10px * (0 + var(--bfhsl-make-folder-hover))) 0 black;
+    }
+    &:has(> div > nav) > [class^=base] {
+        margin-bottom: calc(72px * (1 - var(--bfhsl-make-folder-hover))) !important;
+    }
 }
 
 
